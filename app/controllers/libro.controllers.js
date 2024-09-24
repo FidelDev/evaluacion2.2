@@ -138,7 +138,7 @@ exports.deleteById = async (req, res) => {
                 error: "404",
             });
         } else {
-            await libro.destroy();
+            await Libro.destroy();
             res.status(200).json({
                 message: "Delete Successfully a Book with id = " + LibroId,
                 Libro: Libro,
