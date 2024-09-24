@@ -130,7 +130,7 @@ exports.updateById = async (req, res) => {
 exports.deleteById = async (req, res) => {
     try{
         let LibroId = req.params.id_libro;
-        let Libro = await Usuarios.findByPk(LibroId);
+        let Libro = await Libros.findByPk(LibroId);
 
         if(!Libro){
             res.status(404).json({
